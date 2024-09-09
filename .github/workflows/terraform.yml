@@ -17,17 +17,13 @@ jobs:
     defaults:
       run:
         shell: bash
-        #working-directory: 01_Terraform
+        working-directory: 01_Terraform
 
     steps:
     # Checkout the repository to the GitHub Actions runner
     - name: Checkout
       uses: actions/checkout@v4
     
-    # Change Directory for Terraform files
-    - name: Change Directory
-      run: cd .\01_Terraform
-
     # Change Directory for Terraform files
     - name: Login using Managed Identity
       uses: azure/login@v1
