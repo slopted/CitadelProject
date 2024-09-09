@@ -10,10 +10,10 @@ terraform {
 
 provider "azurerm" {
   features {}
-    
-    client_id       = ${{ secrets.AZURE_CLIENT_ID }}
+  use_msi = true
+  /*  client_id       = ${{ secrets.AZURE_CLIENT_ID }}
     #client_secret   = var.client_secret
     tenant_id       = ${{ secrets.AZURE_TENANT_ID }}
     subscription_id = ${{ secrets.AZURE_SUBSCRIPTION_ID }}
-
+  */
 }
